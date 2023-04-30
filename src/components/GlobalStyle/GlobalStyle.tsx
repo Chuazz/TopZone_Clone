@@ -4,6 +4,7 @@ import { PropsWithChildren } from 'react';
 // style
 import './GlobalStyle.scss';
 import './library/Grid.scss';
+import './custom/ReactSlick.scss';
 import './library/Margin.scss';
 import './library/Padding.scss';
 
