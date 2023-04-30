@@ -1,11 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"lib": [
-			"DOM",
-			"DOM.Iterable",
-			"ESNext"
-		],
+		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"module": "ESNext",
 		"skipLibCheck": true,
 		/* Bundler mode */
@@ -22,53 +18,23 @@
 		"noFallthroughCasesInSwitch": true,
 		"baseUrl": ".",
 		"paths": {
-			"@assets/*": [
-				"src/assets/*"
-			],
-			"@components/*": [
-				"src/components/*"
-			],
-			"@config/*": [
-				"src/config/*"
-			],
-			"@contexts/*": [
-				"src/contexts/*"
-			],
-			"@layouts/*": [
-				"src/layouts/*"
-			],
-			"@models/*": [
-				"src/models/*"
-			],
-			"@pages/*": [
-				"src/pages/*"
-			],
-			"@routes/*": [
-				"src/routes/*"
-			],
-			"@services/*": [
-				"src/services/*"
-			],
-			"@types/*": [
-				"src/types/*"
-			],
-			"@/*": [
-				"src/*"
-			],
-			"@Button/*": [
-				"src/components/Button/*"
-			],
-			"@Icon/*": [
-				"src/components/Icon/*"
-			],
-			"@Banner/*": [
-				"src/components/Banner/*"
-			]
+			"@assets/*": ["src/assets/*"],
+			"@components/*": ["src/components/*"],
+			"@config/*": ["src/config/*"],
+			"@contexts/*": ["src/contexts/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@models/*": ["src/models/*"],
+			"@pages/*": ["src/pages/*"],
+			"@routes/*": ["src/routes/*"],
+			"@services/*": ["src/services/*"],
+			"@types/*": ["src/types/*"],
+			"@/*": ["src/*"],
+			"@Button/*": ["src/components/Button/*"],
+			"@Icon/*": ["src/components/Icon/*"],
+			"@Banner/*": ["src/components/Banner/*"]
 		}
 	},
-	"include": [
-		"src"
-	],
+	"include": ["src"],
 	"references": [
 		{
 			"path": "./tsconfig.node.json"

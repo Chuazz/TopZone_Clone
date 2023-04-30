@@ -47,7 +47,7 @@ const Header = () => {
 					<div className={clsx(styles.logo, 'h-2')}>
 						<div>
 							<p className={clsx(styles.navItem, styles.active)}>
-								<Image src={logo} />
+								<Image src={logo} size={120} />
 							</p>
 						</div>
 					</div>

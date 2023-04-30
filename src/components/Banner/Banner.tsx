@@ -43,19 +43,19 @@ const Banner = () => {
 	};
 
 	return (
-		<div>
+		<div className="p-b-24">
 			<Slider {...settings}>
 				<div>
-					<Image src={Home.b1} />
+					<Image src={Home.b1} size={'100%'} />
 				</div>
 				<div>
-					<Image src={Home.b2} />
+					<Image src={Home.b2} size={'100%'} />
 				</div>
 				<div>
-					<Image src={Home.b3} />
+					<Image src={Home.b3} size={'100%'} />
 				</div>
 				<div>
-					<Image src={Home.b4} />
+					<Image src={Home.b4} size={'100%'} />
 				</div>
 			</Slider>
 		</div>

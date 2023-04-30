@@ -1,0 +1,16 @@
+.categoryItem {
+	background: #323232;
+	cursor: pointer;
+	padding: 36px 32px 16px 32px;
+	border-radius: 8px;
+	min-width: 180px;
+
+	&:hover {
+		box-shadow: -4px -4px 8px rgba(134, 134, 134, 0.2), 4px 4px 8px rgba(28, 28, 28, 0.4);
+	}
+
+	p {
+		color: #fff;
+		padding-top: 12px;
+	}
+}
