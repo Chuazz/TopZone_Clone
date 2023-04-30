@@ -1,0 +1,12 @@
+.container.circle {
+	border-radius: 50%;
+	justify-content: center;
+	background: #2f2f30;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+
+	&:hover {
+		background: #262627;
+	}
+}

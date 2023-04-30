@@ -1,5 +1,11 @@
-const Home = ()  => {
-	return <div>This is Home</div>;
+import { Banner } from '@components/Banner';
+
+const Home = () => {
+	return (
+		<div>
+			<Banner />
+		</div>
+	);
 };
 
 export default Home;

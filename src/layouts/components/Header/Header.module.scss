@@ -1,0 +1,270 @@
+.container {
+	background: #101010;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+.logo img {
+	width: 120px;
+}
+
+.navbar .navItem {
+	padding: 20px 24px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.navbar .navItem:hover {
+	background: #2d2d2d;
+}
+
+.navbar .navItem.active {
+	background: #2d2d2d;
+}
+
+.navbar .navItem.active {
+	background: #2d2d2d;
+}
+
+a.cart p.active {
+	color: #fff;
+	height: 15px;
+	width: 15px;
+	line-height: 15px;
+	text-align: center;
+	background: red;
+	font-size: 1.2rem;
+	border-radius: 50%;
+	bottom: 8px;
+	left: 10px;
+}
+
+.notify {
+	position: absolute;
+	background: #fff;
+	padding: 12px;
+	width: 220px;
+	height: 88px;
+	border-radius: 7px;
+	right: -8px;
+	top: 130%;
+	font-size: 1.3rem;
+	transform-origin: 95% top;
+	transform: scale(0);
+	opacity: 0;
+}
+
+.notify.active {
+	animation: floatOut 0.5s ease-in-out forwards;
+}
+
+.notify::after {
+	position: absolute;
+	display: block;
+	right: 18px;
+	top: -18px;
+	content: '';
+	border: 10px solid #fff;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+}
+
+.buyBtn {
+	position: absolute;
+	margin: 0 40px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.buyBtn button {
+	width: 100%;
+	padding: 16px 0;
+	background: #0071e3;
+	color: #fff;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.buyBtn:active {
+	transform: scale(0.99);
+}
+
+.cart .buyBtn {
+	margin: 8px 12px;
+}
+
+.cart .buyBtn button {
+	padding: 8px 0;
+}
+
+@keyframes floatOut {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.circle-btn {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1.3rem;
+}
+
+.circle-btn.absolute {
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+p {
+	margin: 0;
+}
+
+.navbar .navItem {
+	font-size: 1.5rem;
+}
+
+.layout {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+
+.search {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 99;
+	width: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px 0;
+	text-align: center;
+	display: none;
+}
+
+.search input {
+	font-size: 1.6rem;
+	background: transparent;
+	flex: 1;
+}
+
+.container.searching .layout,
+.container.active .search {
+	display: block;
+}
+
+.container.searching .body {
+	animation: disappear 0.8s ease-in-out forwards;
+}
+
+.container.notSearch .body {
+	animation: appear 0.8s ease-in-out forwards;
+}
+
+.container.searching .search {
+	animation: appear 0.8s ease-in-out forwards;
+}
+
+.container.notSearch .search {
+	animation: disappear 0.8s ease-in-out forwards;
+}
+
+.container.searching .search input {
+	animation: searchFloatIn 0.8s ease-in-out forwards;
+}
+
+.container.notSearch .search input {
+	animation: searchFloatOut 0.7s ease-in-out forwards;
+}
+
+.container.searching .searchForm,
+.container.searching .layout {
+	animation: appear 0.8s ease-in-out forwards;
+}
+
+.container.notSearch .navbar .container.notSearch .logo,
+.container.notSearch .user {
+	animation: appear 0.8s ease-in-out forwards;
+}
+
+.container.notSearch .searchForm,
+.container.notSearch .layout {
+	animation: disappear 0.5s ease-in-out forwards;
+}
+
+.container.notSearch .body {
+	z-index: 1000;
+}
+
+@keyframes searchFloatIn {
+	from {
+		opacity: 0;
+		display: none;
+		transform: translate(100px, 0);
+		width: 30%;
+	}
+
+	to {
+		opacity: 1;
+		display: block;
+		transform: translate(0, 0);
+		width: 90%;
+	}
+}
+
+@keyframes searchFloatOut {
+	from {
+		opacity: 1;
+		display: block;
+		transform: translate(0, 0);
+		width: 90%;
+	}
+
+	to {
+		opacity: 0;
+		display: none;
+		transform: translate(100px, 0);
+		width: 30%;
+	}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		display: none;
+	}
+
+	to {
+		opacity: 1;
+		display: block;
+	}
+}
+
+@keyframes disappear {
+	from {
+		opacity: 1;
+		display: block;
+	}
+
+	to {
+		opacity: 0;
+		display: none !important;
+	}
+}

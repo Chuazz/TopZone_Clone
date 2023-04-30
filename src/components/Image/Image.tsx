@@ -3,9 +3,9 @@ import { PropsWithChildren, forwardRef, memo, useState } from 'react';
 
 type ImageProps = PropsWithChildren<{
 	src: string;
-	className: string;
-	alt: string;
-	onClick: Function;
+	className?: string;
+	alt?: string;
+	onClick?: Function;
 }>;
 export type Ref = HTMLImageElement;
 
