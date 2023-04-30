@@ -26,12 +26,11 @@
 			"@models/*": ["src/models/*"],
 			"@pages/*": ["src/pages/*"],
 			"@routes/*": ["src/routes/*"],
-			"@services/*": ["src/services/*"],
 			"@types/*": ["src/types/*"],
 			"@/*": ["src/*"],
-			"@Button/*": ["src/components/Button/*"],
-			"@Icon/*": ["src/components/Icon/*"],
-			"@Banner/*": ["src/components/Banner/*"]
+			"@utils/*": ["src/utils/*"],
+			"@util/*": ["src/util/*"],
+			"@route/*": ["src/route/*"]
 		}
 	},
 	"include": ["src"],

@@ -1,0 +1,23 @@
+.container {
+	padding-bottom: 36px;
+	color: #fff;
+}
+
+.label {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.showMore {
+	* {
+		transition: all 0.2s linear;
+	}
+}
+
+.showMore:hover {
+	text-decoration: underline;
+
+	svg {
+		transform: translateX(8px);
+	}
+}

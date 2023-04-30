@@ -15,6 +15,7 @@ import { logo } from '@assets/image/Store';
 import styles from './Header.module.scss';
 import { useState } from 'react';
 import { Icon } from '@components/Icon';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
 	const [searching, setSearching] = useState(false);
@@ -46,9 +47,9 @@ const Header = () => {
 				<div className={clsx(styles.body, 'row ali-center jus-between relative')}>
 					<div className={clsx(styles.logo, 'h-2')}>
 						<div>
-							<p className={clsx(styles.navItem, styles.active)}>
+							<Link to={'/home'} className={clsx(styles.navItem, styles.active)}>
 								<Image src={logo} size={120} />
-							</p>
+							</Link>
 						</div>
 					</div>
 
@@ -56,11 +57,21 @@ const Header = () => {
 						<div>
 							<div className="s-0 row ali-center jus-center w-100">
 								<div>
-									<p className={clsx(styles.navItem)}>iPhone</p>
+									<NavLink
+										to={'/home/phone'}
+										className={(nav) => clsx(styles.navItem, { [styles.active]: nav.isActive })}
+									>
+										iPhone
+									</NavLink>
 								</div>
 
 								<div>
-									<p className={clsx(styles.navItem)}>Phụ kiện</p>
+									<NavLink
+										to={'/home/accessory'}
+										className={(nav) => clsx(styles.navItem, { [styles.active]: nav.isActive })}
+									>
+										Phụ kiện
+									</NavLink>
 								</div>
 							</div>
 						</div>

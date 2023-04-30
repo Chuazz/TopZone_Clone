@@ -1,0 +1,43 @@
+.container {
+	background: #323232;
+	border-radius: 20px;
+	padding-top: 30px;
+	padding-bottom: 24px;
+	height: 100%;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: -4px -4px 8px rgba(134, 134, 134, 0.2), 4px 4px 8px rgba(28, 28, 28, 0.4);
+	}
+}
+
+.capacityItem {
+	margin-top: 12px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	background: #222324;
+	border: 1px solid transparent;
+	color: #fff;
+
+	&:hover {
+		border: 1px solid #535353;
+	}
+
+	&.active {
+		border: 1px solid #535353;
+	}
+}
+
+.name {
+	font-size: 1.7rem;
+	color: #fff;
+	width: 85%;
+	margin: 0 auto;
+	height: 1.7 * 2 * 1.6rem;
+	overflow: hidden;
+}
+
+.price {
+	font-size: 1.8rem;
+	color: #fff;
+}

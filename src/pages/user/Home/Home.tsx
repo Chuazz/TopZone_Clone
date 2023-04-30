@@ -13,6 +13,7 @@ import axios from 'axios';
 import productAPI from '@config/productAPI';
 import Productdetail from '@models/ProductDetail';
 import ProductList from '@components/ProductList/ProductList';
+import { NavLink } from 'react-router-dom';
 
 const Home = () => {
 	const [phones, setPhones] = useState<Productdetail[]>([]);
@@ -32,27 +33,30 @@ const Home = () => {
 		<div>
 			<Banner />
 
-			<div className={clsx('row jus-center gap-16 p-t-32 p-b-32')}>
-				<div className={styles.categoryItem}>
-					<div className="row flex-column ali-center h-100">
-						<div className="flex-1 row flex-column jus-end">
-							<Image src={phone} size={110} />
+			<div className="wide grid">
+				<div className={clsx('row jus-center gap-16 p-t-32 p-b-32')}>
+					<NavLink to={'/home/phone'} className={styles.categoryItem}>
+						<div className="row flex-column ali-center h-100">
+							<div className="flex-1 row flex-column jus-end">
+								<Image src={phone} size={110} />
+							</div>
+							<p>iPhone</p>
 						</div>
-						<p>iPhone</p>
-					</div>
-				</div>
-				<div className={styles.categoryItem}>
-					<div className="row flex-column ali-center h-100">
-						<div className="flex-1 row flex-column jus-end">
-							<Image src={accessory} size={70} />
-						</div>
-						<p>Phụ kiện</p>
-					</div>
-				</div>
-			</div>
+					</NavLink>
 
-			<ProductList products={phones} label="iPhone" showMore="Xem thêm" />
-			<ProductList products={accessories} label="Phụ kiện" showMore="Xem thêm" />
+					<NavLink to={'/home/accessory'} className={styles.categoryItem}>
+						<div className="row flex-column ali-center h-100">
+							<div className="flex-1 row flex-column jus-end">
+								<Image src={accessory} size={70} />
+							</div>
+							<p>Phụ kiện</p>
+						</div>
+					</NavLink>
+				</div>
+
+				<ProductList products={phones} label="iPhone" showMore="Xem thêm" showMoreLinkTo="/phone" />
+				<ProductList products={accessories} label="Phụ kiện" showMore="Xem thêm" showMoreLinkTo="/accessory" />
+			</div>
 		</div>
 	);
 };
