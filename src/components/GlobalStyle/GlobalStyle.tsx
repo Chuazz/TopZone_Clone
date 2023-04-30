@@ -2,7 +2,10 @@
 import { PropsWithChildren } from 'react';
 
 // style
-import './GlobalStyle.module.scss';
+import './GlobalStyle.scss';
+import './library/Grid.scss';
+import './library/Margin.scss';
+import './library/Padding.scss';
 
 type GlobalStyleProps = PropsWithChildren<{}>;
 

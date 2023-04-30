@@ -1,0 +1,126 @@
+:root {
+	--main-font: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol';
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	outline: none;
+	line-height: 1.7;
+	font-family: var(--main-font);
+	font-size: 1.5rem;
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 999px;
+}
+
+/* ================================ TAG ============================= */
+html {
+	font-weight: 500;
+	font-size: 62.5%;
+	overflow: overlay;
+}
+
+body {
+	text-rendering: optimizeLegibility;
+}
+
+label {
+	display: block;
+}
+
+svg,
+img {
+	user-select: none;
+}
+
+button,
+input {
+	border: none;
+	outline: none;
+	color: inherit;
+	font-size: inherit;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+a {
+	color: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+strong {
+	font-weight: 700;
+}
+
+/* ================================= CLASS ================================= */
+.relative {
+	position: relative;
+}
+
+.opcity-1 {
+	opacity: 1;
+}
+
+.font-normal {
+	font-weight: normal;
+}
+
+.font-semi {
+	font-weight: 500;
+}
+
+.d-none {
+	display: none;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.w-fit-content {
+	width: fit-content;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.white-space-no-wrap {
+	white-space: nowrap;
+}
