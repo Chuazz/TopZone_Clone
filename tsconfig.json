@@ -52,8 +52,11 @@
 			"@util/*": [
 				"src/util/*"
 			],
-			"@SlickArrow/*": [
-				"src/components/SlickArrow/*"
+			"@Pagination/*": [
+				"src/components/Pagination/*"
+			],
+			"@Pagnination/*": [
+				"src/components/Pagnination/*"
 			]
 		}
 	},

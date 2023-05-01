@@ -20,11 +20,11 @@ const Home = () => {
 	const [accessories, setAccessories] = useState<Productdetail[]>([]);
 
 	useEffect(() => {
-		axios.get(productAPI.product_list({})).then((res) => {
+		axios.get(productAPI.product_list({ perPage: 12 })).then((res) => {
 			setPhones(res.data.data);
 		});
 
-		axios.get(productAPI.product_list({ type: 2 })).then((res) => {
+		axios.get(productAPI.product_list({ type: 2, perPage: 12 })).then((res) => {
 			setAccessories(res.data.data);
 		});
 	}, []);
@@ -34,7 +34,7 @@ const Home = () => {
 			<Banner />
 
 			<div className="wide grid">
-				<div className={clsx('row jus-center gap-16 p-t-32 p-b-32')}>
+				<div className={clsx('row jus-center gap-16 p-t-40 p-b-32')}>
 					<NavLink to={'/home/phone'} className={styles.categoryItem}>
 						<div className="row flex-column ali-center h-100">
 							<div className="flex-1 row flex-column jus-end">
@@ -54,8 +54,25 @@ const Home = () => {
 					</NavLink>
 				</div>
 
-				<ProductList products={phones} label="iPhone" showMore="Xem thêm" showMoreLinkTo="/phone" />
-				<ProductList products={accessories} label="Phụ kiện" showMore="Xem thêm" showMoreLinkTo="/accessory" />
+				<div className="p-b-40">
+					<ProductList
+						products={phones}
+						isCarousel
+						label="iPhone"
+						showMore="Xem thêm"
+						showMoreLinkTo="phone"
+					/>
+				</div>
+
+				<div className="p-t-32">
+					<ProductList
+						products={accessories}
+						isCarousel
+						label="Phụ kiện"
+						showMore="Xem thêm"
+						showMoreLinkTo="accessory"
+					/>
+				</div>
 			</div>
 		</div>
 	);

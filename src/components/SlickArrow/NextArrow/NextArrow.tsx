@@ -1,9 +1,10 @@
 // Framework
-import { FaChevronRight } from 'react-icons/fa';
+import { HiChevronRight } from 'react-icons/hi';
 import { PropsWithChildren } from 'react';
 
 // Component
 import { Button } from '@components/Button';
+import { Icon } from '@components/Icon';
 
 type NextArrowProps = PropsWithChildren<{
 	className?: string;
@@ -16,7 +17,7 @@ const NextArrow = ({ className, style, right, onClick = () => {} }: NextArrowPro
 	return (
 		<div className={className} style={{ ...style, right: right }} onClick={() => onClick()}>
 			<Button size={50}>
-				<FaChevronRight />
+				<Icon size={28} Element={HiChevronRight} />
 			</Button>
 		</div>
 	);

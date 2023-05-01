@@ -1,3 +1,7 @@
+.slick-slider {
+	height: 100%;
+}
+
 .slick-arrow {
 	z-index: 1;
 	width: auto;
@@ -14,6 +18,10 @@
 
 .slick-arrow.slick-next {
 	right: 0;
+}
+
+.slick-dots {
+	bottom: -32px;
 }
 
 .slick-dots li {

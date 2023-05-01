@@ -6,12 +6,13 @@ type ImageProps = PropsWithChildren<{
 	className?: string;
 	alt?: string;
 	size?: number | string;
+	style?: React.CSSProperties;
 	onClick?: Function;
 }>;
 export type Ref = HTMLImageElement;
 
 const Image = forwardRef<Ref, ImageProps>(
-	({ src, size, className, alt = 'error', onClick = () => {}, ...props }, ref) => {
+	({ src, size, style = {}, className, alt = 'error', onClick = () => {} }, ref) => {
 		const [errSrc, setErrSrc] = useState('');
 
 		return (
@@ -20,10 +21,9 @@ const Image = forwardRef<Ref, ImageProps>(
 				src={errSrc || src}
 				alt={alt}
 				ref={ref}
-				style={{ width: size || 'auto' }}
+				style={{ width: size || 'auto', ...style }}
 				onError={() => setErrSrc('https://placehold.co/400')}
 				onClick={(e) => onClick(e)}
-				{...props}
 			/>
 		);
 	},

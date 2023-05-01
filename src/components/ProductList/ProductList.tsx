@@ -17,7 +17,7 @@ import { NextArrow, PrevArrow } from '@components/SlickArrow';
 import Slider from 'react-slick';
 
 type ProductListProps = PropsWithChildren<{
-	label: string | JSX.Element;
+	label?: string | JSX.Element;
 	showMore?: string | JSX.Element;
 	showMoreLinkTo?: string;
 	products: Productdetail[];
@@ -50,10 +50,10 @@ const ProductList = ({ label, showMore, showMoreLinkTo, products, isCarousel = f
 			</div>
 
 			<div className="wrapper-12">
-				{isCarousel ? (
+				{!isCarousel ? (
 					<div className="row">
 						{products.map((product, i) => (
-							<Product key={i} info={product} className={clsx(styles.item)} />
+							<Product key={i} info={product} isShowMemory className={clsx(styles.item)} />
 						))}
 					</div>
 				) : (

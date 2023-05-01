@@ -8,16 +8,16 @@ import styles from './Button.module.scss';
 type ButtonProps = PropsWithChildren<{
 	className?: string;
 	shape?: string;
-	size?: number;
+	size?: number | string;
 	leftIcon?: JSX.Element;
 	leftClass?: string;
 	rightIcon?: JSX.Element;
 	rightClass?: string;
-	style?: object;
+	style?: React.CSSProperties;
 	onClick?: Function;
 }>;
 
-export type Ref = HTMLDivElement;
+export type Ref = HTMLDivElement ;
 
 const Button = forwardRef<Ref, ButtonProps>(
 	(
@@ -32,7 +32,6 @@ const Button = forwardRef<Ref, ButtonProps>(
 			children,
 			style,
 			onClick = () => {},
-			...props
 		},
 		ref,
 	) => {
@@ -42,13 +41,12 @@ const Button = forwardRef<Ref, ButtonProps>(
 				onClick={(e) => onClick(e)}
 				className={clsx(styles.container, 'row ali-center', className, { [styles.circle]: shape === 'circle' })}
 				style={{ width: size, height: size, ...style }}
-				{...props}
 			>
-				<div className={clsx(styles.icon, styles.left, leftClass)}>{leftIcon}</div>
+				{leftIcon && <div className={clsx(styles.icon, styles.left, leftClass)}>{leftIcon}</div>}
 
-				{children}
+				<div className={clsx(styles.label)}>{children}</div>
 
-				<div className={clsx(styles.icon, styles.right, rightClass)}>{rightIcon}</div>
+				{rightIcon && <div className={clsx(styles.icon, styles.right, rightClass)}>{rightIcon}</div>}
 			</div>
 		);
 	},

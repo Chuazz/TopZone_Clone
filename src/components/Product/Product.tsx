@@ -16,8 +16,8 @@ type ProductProps = PropsWithChildren<{
 
 const Product = ({ className, info, isShowMemory = false }: ProductProps) => {
 	return (
-		<div className={clsx('p-l-12 p-r-12 p-b-24')}>
-			<div className={clsx(styles.container, className, 'row flex-column ali-center')}>
+		<div className={clsx(className, 'p-l-12 p-r-12 p-b-24')}>
+			<div className={clsx(styles.body, 'row flex-column ali-center')}>
 				<Image
 					src={`https://raw.githubusercontent.com/Chuazz/136_Product_Image/main/${info.anhs[0].Anh_URL}`}
 					size="80%"

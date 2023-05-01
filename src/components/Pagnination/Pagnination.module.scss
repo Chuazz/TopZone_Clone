@@ -1,0 +1,21 @@
+.container {
+	p {
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: #323232;
+		color: #fff;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all 0.1s linear;
+	}
+
+	p:hover {
+		background: #4d4d4d;
+	}
+
+	p.active {
+		background: #4d4d4d;
+	}
+}

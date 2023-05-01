@@ -1,8 +1,8 @@
 // Framework
 import clsx from 'clsx';
-import { FiSearch } from 'react-icons/fi';
 import { BsFillBagFill } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
+import { HiMagnifyingGlass } from 'react-icons/hi2';
 
 // Component
 import { Button } from '@/components/Button';
@@ -80,12 +80,12 @@ const Header = () => {
 					<div className={clsx(styles.user, 'h-2')}>
 						<div className="row ali-center jus-end gap-8">
 							<Button onClick={() => onOpenSearchForm()}>
-								<FiSearch />
+								<Icon size={16} Element={HiMagnifyingGlass} />
 							</Button>
 
 							<a className={clsx(styles.cart, styles.navItem, 'relative')}>
 								<Button>
-									<BsFillBagFill />
+									<Icon size={16} Element={BsFillBagFill} />
 								</Button>
 								<p className={clsx(styles.cartCount)}></p>
 								<div className={clsx(styles.notify)}>
@@ -102,7 +102,7 @@ const Header = () => {
 				<div className={clsx(styles.search)}>
 					<form action="" method="get" className={clsx(styles.searchForm)}>
 						<div className="row ali-center gap-12">
-							<Icon Element={FiSearch} />
+							<Icon Element={HiMagnifyingGlass} />
 							<input type="text" name="SP_TEN" placeholder="Tìm kiếm sản phẩm" />
 							<Icon Element={IoClose} onClick={() => onCloseSearchForm()} />
 						</div>

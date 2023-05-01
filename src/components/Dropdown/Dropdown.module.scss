@@ -1,0 +1,60 @@
+.option {
+	position: absolute;
+	width: 200px;
+	background: #fff;
+	border-radius: 8px;
+	right: 0;
+	padding: 8px;
+
+	.tick {
+		transform: scale(0);
+		width: 0 !important;
+		opacity: 0;
+		transition: all 0.2s linear;
+	}
+}
+
+.container {
+	.option {
+		display: none;
+	}
+
+	.arrow {
+		transition: all 0.2s linear;
+	}
+}
+
+.container.active {
+	.option {
+		display: block;
+	}
+
+	.arrow {
+		transform: rotate(180deg);
+	}
+}
+
+.item {
+	padding: 4px;
+}
+
+.item:hover {
+	.label {
+		color: #0071e3;
+	}
+}
+
+.item.active {
+	.tick {
+		transform: scale(1);
+		opacity: 1;
+		width: 16px !important;
+	}
+	.label {
+		color: #0071e3;
+	}
+}
+
+.label {
+	color: #292929;
+}
