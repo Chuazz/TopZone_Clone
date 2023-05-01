@@ -53,6 +53,11 @@ a.cart p.active {
 	opacity: 0;
 }
 
+.searchForm input {
+	color: #fff;
+	caret-color: #fff;
+}
+
 .notify.active {
 	animation: floatOut 0.5s ease-in-out forwards;
 }

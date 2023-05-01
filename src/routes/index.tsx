@@ -1,7 +1,6 @@
 import { Navigate, createBrowserRouter } from 'react-router-dom';
-import { Accessory, Home, Phone, Profile } from '../pages/user';
+import { Accessory, Home, Phone, Profile, Search } from '../pages/user';
 import DefaultLayout from '../layouts/DefaultLayout';
-import route from '../config/routes';
 
 const router = createBrowserRouter([
 	{
@@ -9,7 +8,7 @@ const router = createBrowserRouter([
 		element: <Navigate to="/home" />,
 	},
 	{
-		path: route.home,
+		path: '/home',
 		element: <DefaultLayout></DefaultLayout>,
 		children: [
 			{
@@ -18,22 +17,22 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: route.profile,
+				path: 'profile',
 				element: <Profile />,
 			},
 			{
-				path: route.phone,
+				path: 'phone',
 				element: <Phone />,
 			},
 			{
-				path: route.accessory,
+				path: 'accessory',
 				element: <Accessory />,
 			},
+			{
+				path: 'search',
+				element: <Search />,
+			},
 		],
-	},
-	{},
-	{
-		path: route.phone,
 	},
 ]);
 

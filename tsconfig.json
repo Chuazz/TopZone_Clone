@@ -57,6 +57,12 @@
 			],
 			"@Pagnination/*": [
 				"src/components/Pagnination/*"
+			],
+			"@types/*": [
+				"src/assets/types/*"
+			],
+			"@Dropdown/*": [
+				"src/components/Dropdown/*"
 			]
 		}
 	},

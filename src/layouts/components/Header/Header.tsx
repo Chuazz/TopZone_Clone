@@ -13,14 +13,15 @@ import { appleLogo, logo } from '@assets/image/Store';
 
 // Style
 import styles from './Header.module.scss';
-import { useState } from 'react';
+import { KeyboardEventHandler, useState } from 'react';
 import { Icon } from '@components/Icon';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 const Header = () => {
 	const [searching, setSearching] = useState(false);
 	const [active, setActive] = useState(false);
 	const [notSearch, setnotSearch] = useState(true);
+	const navigate = useNavigate();
 
 	const onOpenSearchForm = () => {
 		setActive(true);
@@ -32,6 +33,15 @@ const Header = () => {
 	const onCloseSearchForm = () => {
 		setSearching(false);
 		setnotSearch(true);
+	};
+
+	const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+		let element = e.target as HTMLInputElement;
+
+		if (e.key === 'Enter') {
+			navigate(`search?q=${element.value}`);
+			onCloseSearchForm();
+		}
 	};
 
 	return (
@@ -100,13 +110,13 @@ const Header = () => {
 				</div>
 
 				<div className={clsx(styles.search)}>
-					<form action="" method="get" className={clsx(styles.searchForm)}>
+					<div className={clsx(styles.searchForm)}>
 						<div className="row ali-center gap-12">
 							<Icon Element={HiMagnifyingGlass} />
-							<input type="text" name="SP_TEN" placeholder="Tìm kiếm sản phẩm" />
+							<input type="text" onKeyDown={(e) => onKeyDown(e)} placeholder="Tìm kiếm sản phẩm" />
 							<Icon Element={IoClose} onClick={() => onCloseSearchForm()} />
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -21,10 +21,20 @@ type ProductListProps = PropsWithChildren<{
 	showMore?: string | JSX.Element;
 	showMoreLinkTo?: string;
 	products: Productdetail[];
+	productClassName?: string;
+	isShowMemory?: boolean;
 	isCarousel?: boolean;
 }>;
 
-const ProductList = ({ label, showMore, showMoreLinkTo, products, isCarousel = false }: ProductListProps) => {
+const ProductList = ({
+	label,
+	showMore,
+	productClassName,
+	showMoreLinkTo,
+	products,
+	isCarousel = false,
+	isShowMemory = true,
+}: ProductListProps) => {
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -53,7 +63,12 @@ const ProductList = ({ label, showMore, showMoreLinkTo, products, isCarousel = f
 				{!isCarousel ? (
 					<div className="row">
 						{products.map((product, i) => (
-							<Product key={i} info={product} isShowMemory className={clsx(styles.item)} />
+							<Product
+								key={i}
+								info={product}
+								isShowMemory={isShowMemory}
+								className={clsx(styles.item, productClassName)}
+							/>
 						))}
 					</div>
 				) : (
