@@ -1,7 +1,11 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"lib": ["DOM", "DOM.Iterable", "ESNext"],
+		"lib": [
+			"DOM",
+			"DOM.Iterable",
+			"ESNext"
+		],
 		"module": "ESNext",
 		"skipLibCheck": true,
 		/* Bundler mode */
@@ -18,22 +22,44 @@
 		"noFallthroughCasesInSwitch": true,
 		"baseUrl": ".",
 		"paths": {
-			"@assets/*": ["src/assets/*"],
-			"@components/*": ["src/components/*"],
-			"@config/*": ["src/config/*"],
-			"@contexts/*": ["src/contexts/*"],
-			"@layouts/*": ["src/layouts/*"],
-			"@models/*": ["src/models/*"],
-			"@pages/*": ["src/pages/*"],
-			"@routes/*": ["src/routes/*"],
-			"@types/*": ["src/types/*"],
-			"@/*": ["src/*"],
-			"@utils/*": ["src/utils/*"],
-			"@util/*": ["src/util/*"],
-			"@route/*": ["src/route/*"]
+			"@assets/*": [
+				"src/assets/*"
+			],
+			"@components/*": [
+				"src/components/*"
+			],
+			"@config/*": [
+				"src/config/*"
+			],
+			"@contexts/*": [
+				"src/contexts/*"
+			],
+			"@layouts/*": [
+				"src/layouts/*"
+			],
+			"@models/*": [
+				"src/models/*"
+			],
+			"@pages/*": [
+				"src/pages/*"
+			],
+			"@routes/*": [
+				"src/routes/*"
+			],
+			"@/*": [
+				"src/*"
+			],
+			"@util/*": [
+				"src/util/*"
+			],
+			"@SlickArrow/*": [
+				"src/components/SlickArrow/*"
+			]
 		}
 	},
-	"include": ["src"],
+	"include": [
+		"src"
+	],
 	"references": [
 		{
 			"path": "./tsconfig.node.json"

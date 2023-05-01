@@ -9,7 +9,7 @@ import { Button } from '@/components/Button';
 
 // Image
 import { Image } from '@components/Image';
-import { logo } from '@assets/image/Store';
+import { appleLogo, logo } from '@assets/image/Store';
 
 // Style
 import styles from './Header.module.scss';
@@ -46,11 +46,11 @@ const Header = () => {
 			<div className="relative">
 				<div className={clsx(styles.body, 'row ali-center jus-between relative')}>
 					<div className={clsx(styles.logo, 'h-2')}>
-						<div>
-							<Link to={'/home'} className={clsx(styles.navItem, styles.active)}>
-								<Image src={logo} size={120} />
-							</Link>
-						</div>
+						<Link to={'/home'} className={clsx(styles.navItem, styles.active, 'row ali-center')}>
+							<Image src={logo} size={112} className={clsx(styles.logoImg)} />
+
+							<Image src={appleLogo} size={32} />
+						</Link>
 					</div>
 
 					<div className={clsx(styles.navbar, 'h-8')}>

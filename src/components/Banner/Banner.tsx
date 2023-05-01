@@ -1,35 +1,12 @@
 // Framework
 import Slider from 'react-slick';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 // Component
 import { Image } from '@components/Image';
-import { Button } from '@components/Button';
+import { NextArrow, PrevArrow } from '@components/SlickArrow';
 
 // Image
 import * as Home from '@assets/image/Banner/Home';
-
-function NextArrow(props: any) {
-	const { className, style, onClick } = props;
-	return (
-		<div className={className} style={{ ...style }} onClick={onClick}>
-			<Button size={50}>
-				<FaChevronRight />
-			</Button>
-		</div>
-	);
-}
-
-function PrevArrow(props: any) {
-	const { className, style, onClick } = props;
-	return (
-		<div className={className} style={{ ...style }} onClick={onClick}>
-			<Button size={50}>
-				<FaChevronLeft />
-			</Button>
-		</div>
-	);
-}
 
 const Banner = () => {
 	const settings = {
