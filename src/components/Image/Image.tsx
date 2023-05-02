@@ -1,14 +1,14 @@
 // Framework
-import { PropsWithChildren, forwardRef, memo, useState } from 'react';
+import { forwardRef, memo, useState } from 'react';
 
-type ImageProps = PropsWithChildren<{
+type ImageProps = {
 	src: string;
 	className?: string;
 	alt?: string;
 	size?: number | string;
 	style?: React.CSSProperties;
 	onClick?: Function;
-}>;
+};
 export type Ref = HTMLImageElement;
 
 const Image = forwardRef<Ref, ImageProps>(

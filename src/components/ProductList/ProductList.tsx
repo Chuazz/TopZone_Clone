@@ -1,6 +1,5 @@
 // Framework
 import clsx from 'clsx';
-import { PropsWithChildren } from 'react';
 import { Link } from 'react-router-dom';
 import { BiChevronRight } from 'react-icons/bi';
 
@@ -16,7 +15,7 @@ import { Icon } from '@components/Icon';
 import { NextArrow, PrevArrow } from '@components/SlickArrow';
 import Slider from 'react-slick';
 
-type ProductListProps = PropsWithChildren<{
+type ProductListProps = {
 	label?: string | JSX.Element;
 	showMore?: string | JSX.Element;
 	showMoreLinkTo?: string;
@@ -24,7 +23,7 @@ type ProductListProps = PropsWithChildren<{
 	productClassName?: string;
 	isShowMemory?: boolean;
 	isCarousel?: boolean;
-}>;
+};
 
 const ProductList = ({
 	label,

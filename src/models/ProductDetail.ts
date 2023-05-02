@@ -2,6 +2,7 @@ import anh from '@models/anh.model';
 import binh_luan from '@models/binh_luan.model';
 import dung_luong from '@models/dung_luong.model';
 import thong_tin_san_pham from '@models/thong_tin_san_pham.model';
+import mac_sac from './mau_sac.model';
 
 class Productdetail {
 	ID_SP!: number;
@@ -13,6 +14,7 @@ class Productdetail {
 	dung_luongs!: dung_luong[];
 	binh_luans!: binh_luan[];
 	thong_tin_san_phams!: thong_tin_san_pham[];
+	mau_sacs!: mac_sac[];
 
 	init(
 		ID_SP: number,
@@ -24,6 +26,7 @@ class Productdetail {
 		dung_luongs: dung_luong[],
 		binh_luans: binh_luan[],
 		thong_tin_san_phams: thong_tin_san_pham[],
+		mau_sacs: mac_sac[]
 	) {
 		this.ID_SP = ID_SP;
 		this.ID_DMSP = ID_DMSP;
@@ -34,6 +37,7 @@ class Productdetail {
 		this.dung_luongs = dung_luongs;
 		this.binh_luans = binh_luans;
 		this.thong_tin_san_phams = thong_tin_san_phams;
+		this.mau_sacs = mau_sacs;
 	}
 }
 

@@ -5,20 +5,19 @@ import clsx from 'clsx';
 // Component
 import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
-import { PropsWithChildren, useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Style
 import styles from './Dropdown.module.scss';
 import { Option } from '@assets/types';
 import { tick } from '@assets/image/Layout';
 import { Image } from '@components/Image';
-import util from '@/util';
 
-type DropdownProps = PropsWithChildren<{
+type DropdownProps = {
 	options: Option[];
 	defaultOption?: Option;
 	onSelect?: Function;
-}>;
+};
 
 const Dropdown = ({ options, defaultOption, onSelect = () => {} }: DropdownProps) => {
 	const [curr, setCurr] = useState<Option>(defaultOption || options[0]);

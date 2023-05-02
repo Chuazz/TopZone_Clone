@@ -1,17 +1,16 @@
 // Framework
 import { HiChevronRight } from 'react-icons/hi';
-import { PropsWithChildren } from 'react';
 
 // Component
 import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
 
-type NextArrowProps = PropsWithChildren<{
+type NextArrowProps = {
 	className?: string;
 	style?: React.CSSProperties;
 	right?: string;
 	onClick?: Function;
-}>;
+};
 
 const NextArrow = ({ className, style, right, onClick = () => {} }: NextArrowProps) => {
 	return (

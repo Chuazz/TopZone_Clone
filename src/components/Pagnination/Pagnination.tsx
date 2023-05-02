@@ -1,14 +1,14 @@
 // Framework
 import clsx from 'clsx';
-import { PropsWithChildren, useState } from 'react';
+import { useState } from 'react';
 
 // Style
 import styles from './Pagnination.module.scss';
 
-type PagninationProps = PropsWithChildren<{
+type PagninationProps = {
 	lastPage: number;
 	onChangePage: Function;
-}>;
+};
 
 const Pagnination = ({ lastPage, onChangePage = () => {} }: PagninationProps) => {
 	const pages = [];
@@ -21,7 +21,7 @@ const Pagnination = ({ lastPage, onChangePage = () => {} }: PagninationProps) =>
 	const onClickItem = (item: number) => {
 		setCurrPage(item);
 		onChangePage(item);
-	};  
+	};
 
 	return (
 		<div className={clsx(styles.container, 'row ali-center jus-center gap-8')}>

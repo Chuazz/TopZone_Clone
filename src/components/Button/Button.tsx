@@ -17,7 +17,7 @@ type ButtonProps = PropsWithChildren<{
 	onClick?: Function;
 }>;
 
-export type Ref = HTMLDivElement ;
+export type Ref = HTMLDivElement;
 
 const Button = forwardRef<Ref, ButtonProps>(
 	(
@@ -39,12 +39,12 @@ const Button = forwardRef<Ref, ButtonProps>(
 			<div
 				ref={ref}
 				onClick={(e) => onClick(e)}
-				className={clsx(styles.container, 'row ali-center', className, { [styles.circle]: shape === 'circle' })}
+				className={clsx(styles.container, 'row ali-center jus-center', className, { [styles.circle]: shape === 'circle' })}
 				style={{ width: size, height: size, ...style }}
 			>
 				{leftIcon && <div className={clsx(styles.icon, styles.left, leftClass)}>{leftIcon}</div>}
 
-				<div className={clsx(styles.label)}>{children}</div>
+				<div className={clsx(styles.label, 'text-center')}>{children}</div>
 
 				{rightIcon && <div className={clsx(styles.icon, styles.right, rightClass)}>{rightIcon}</div>}
 			</div>

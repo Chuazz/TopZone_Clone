@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // Component
-import { Banner } from '@components/Banner';
+import { Carousel } from '@components/Carousel';
 import { Dropdown } from '@components/Dropdown';
 import { Pagnination } from '@components/Pagnination';
 import ProductList from '@components/ProductList/ProductList';
@@ -68,7 +68,7 @@ const Accessory = () => {
 			<div className="wide grid">
 				<p className={clsx(styles.label)}>Phụ kiện</p>
 
-				<Banner borderRadius="20px" banners={[b1, b2]} />
+				<Carousel borderRadius="20px" banners={[b1, b2]} />
 
 				<div className="row ali-center jus-between p-t-32 p-b-32">
 					<div className={clsx(styles.categoryList, 'row ali-center gap-24')}>

@@ -1,17 +1,16 @@
 // Framework
-import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 
 // Style
 import styles from './Icon.module.scss';
 
-type IconProps = PropsWithChildren<{
+type IconProps = {
 	color?: string;
 	className?: string;
 	size?: number;
 	onClick?: Function;
 	Element: () => JSX.Element;
-}>;
+};
 
 const Icon = ({ color = '#dddbdb', className, size = 20, Element, onClick = () => {} }: IconProps) => {
 	return (

@@ -1,5 +1,4 @@
 // Framework
-import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 
 // Style
@@ -8,7 +7,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Outlet } from 'react-router-dom';
 
-type DefaultLayoutProps = PropsWithChildren<{}>;
+type DefaultLayoutProps = {};
 
 const DefaultLayout = ({}: DefaultLayoutProps) => {
 	return (

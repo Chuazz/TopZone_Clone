@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 
 // Component
-import { Banner } from '@components/Banner';
+import { Carousel } from '@components/Carousel';
 
 // Style
 import styles from './Home.module.scss';
@@ -31,7 +31,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<Banner />
+			<Carousel />
 
 			<div className="wide grid">
 				<div className={clsx('row jus-center gap-16 p-t-40 p-b-32')}>

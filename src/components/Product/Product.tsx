@@ -1,28 +1,30 @@
 // Framework
 import clsx from 'clsx';
-import { PropsWithChildren } from 'react';
 
 // Style
 import styles from './Product.module.scss';
 import Productdetail from '@models/ProductDetail';
 import { Image } from '@components/Image';
 import util from '@/util';
+import { Link } from 'react-router-dom';
 
-type ProductProps = PropsWithChildren<{
+type ProductProps = {
 	className?: string;
 	info: Productdetail;
 	isShowMemory?: boolean;
-}>;
+};
+
+const env = import.meta.env;
 
 const Product = ({ className, info, isShowMemory = false }: ProductProps) => {
 	return (
 		<div className={clsx(className, 'p-l-12 p-r-12 p-b-24')}>
-			<div className={clsx(styles.body, 'row flex-column ali-center')}>
-				<Image
-					src={`https://raw.githubusercontent.com/Chuazz/136_Product_Image/main/${info.anhs[0].Anh_URL}`}
-					size="80%"
-					className="m-b-12"
-				/>
+			<Link
+				to={`/home/detail/${info.Ten_SP}`}
+				state={{ info }}
+				className={clsx(styles.body, 'row flex-column ali-center')}
+			>
+				<Image src={`${env.VITE_PRODUCT_IMG}/${info.anhs[0].Anh_URL}`} size="80%" className="m-b-12" />
 
 				{isShowMemory && (
 					<div className="row ali-center jus-center gap-8">
@@ -38,7 +40,7 @@ const Product = ({ className, info, isShowMemory = false }: ProductProps) => {
 					<p className={clsx(styles.name)}>{info.Ten_SP}</p>
 					<p className={clsx(styles.price)}>{util.addCommas(info.Gia_SP)}đ</p>
 				</div>
-			</div>
+			</Link>
 		</div>
 	);
 };

@@ -1,0 +1,63 @@
+.container {
+	gap: 90px;
+}
+
+.label {
+	font-size: 3.2rem;
+	color: #fff;
+	font-weight: 700;
+}
+
+.price {
+	font-size: 2.6rem;
+	color: #fff;
+	font-weight: 700;
+	padding: 8px 0 12px 0;
+}
+
+.capacity {
+	background: #2f3033;
+	padding: 8px 12px;
+	color: #dbdbdd;
+	border-radius: 8px;
+	font-size: 1.4rem;
+	font-weight: 400;
+	cursor: pointer;
+	border: 1px solid transparent;
+}
+
+.capacity.active {
+	border: 1px solid #535353;
+	background: #1c1c1d;
+}
+
+.colorBorder {
+	border-radius: 50%;
+	height: 44px;
+	width: 44px;
+	box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.25);
+	border: 2px solid transparent;
+}
+
+.color {
+	border-radius: 50%;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	border: 2px solid transparent;
+}
+
+.colorBorder.active {
+	border: 2px solid #0071e3;
+	.color {
+		border: 2px solid #e5e5e5;
+	}
+}
+
+.button {
+	border-radius: 900px;
+	background: #0071e3;
+	padding: 12px 20px;
+	min-width: 120px;
+	text-align: center;
+}

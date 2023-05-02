@@ -3,15 +3,14 @@ import { HiChevronLeft } from 'react-icons/hi';
 
 // Component
 import { Button } from '@components/Button';
-import { PropsWithChildren } from 'react';
 import { Icon } from '@components/Icon';
 
-type PrevArrowProps = PropsWithChildren<{
+type PrevArrowProps = {
 	className?: string;
 	style?: React.CSSProperties;
 	left?: string;
 	onClick?: Function;
-}>;
+};
 
 const PrevArrow = ({ className, style, left, onClick = () => {} }: PrevArrowProps) => {
 	return (

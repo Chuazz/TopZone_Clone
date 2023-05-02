@@ -52,17 +52,11 @@
 			"@util/*": [
 				"src/util/*"
 			],
-			"@Pagination/*": [
-				"src/components/Pagination/*"
+			"@product/*": [
+				"src/pages/product/*"
 			],
-			"@Pagnination/*": [
-				"src/components/Pagnination/*"
-			],
-			"@types/*": [
-				"src/assets/types/*"
-			],
-			"@Dropdown/*": [
-				"src/components/Dropdown/*"
+			"@Carousel/*": [
+				"src/components/Carousel/*"
 			]
 		}
 	},
