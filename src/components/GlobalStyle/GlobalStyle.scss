@@ -13,15 +13,15 @@
 	font-family: var(--main-font);
 	font-size: 1.5rem;
 	scroll-behavior: smooth;
-}
 
-::-webkit-scrollbar {
-	width: 8px;
-	background: transparent;
-}
+	::-webkit-scrollbar {
+		width: 8px;
+	}
 
-::-webkit-scrollbar-thumb {
-	border-radius: 999px;
+	::-webkit-scrollbar-thumb {
+		border-radius: 999px;
+		background: rgb(112, 112, 112);
+	}
 }
 
 /* ================================ TAG ============================= */

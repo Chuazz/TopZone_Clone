@@ -1,1 +1,1 @@
-export { default as productAPI } from './productAPI';
+export { default as headers } from './header';

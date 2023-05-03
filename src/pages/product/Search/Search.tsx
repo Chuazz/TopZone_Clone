@@ -1,6 +1,6 @@
 import { Pagnination } from '@components/Product/Pagnination';
-import productAPI from '@config/productAPI';
-import Productdetail from '@models/ProductDetail';
+import productAPI from '@/API/productAPI';
+import Productdetail from '@assets/types/ProductDetail';
 import axios from 'axios';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';

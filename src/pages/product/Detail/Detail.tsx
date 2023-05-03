@@ -11,14 +11,14 @@ import { Policy } from './components/Policy';
 import { ProductList } from '@components/Product/ProductList';
 
 // Model
-import Productdetail from '@models/ProductDetail';
+import Productdetail from '@assets/types/ProductDetail';
 import { Comment } from './components/Comment';
 
 // Style
 import styles from './Detail.module.scss';
 
 // Config
-import productAPI from '@config/productAPI';
+import productAPI from '@/API/productAPI';
 
 const env = import.meta.env;
 
@@ -71,7 +71,7 @@ const Detail = () => {
 						/>
 					</div>
 				)}
-				<div className='p-t-40'>
+				<div className="p-t-40">
 					<ProductList products={accessories} isCarousel label={`Liên quan`} />
 				</div>
 

@@ -10,8 +10,8 @@ import { Image } from '@components/util/Image';
 import { accessory, phone } from '@assets/image/Layout/Category';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import productAPI from '@config/productAPI';
-import Productdetail from '@models/ProductDetail';
+import productAPI from '@/API/productAPI';
+import Productdetail from '@assets/types/ProductDetail';
 import { NavLink } from 'react-router-dom';
 import { ProductList } from '@components/Product/ProductList';
 

@@ -11,7 +11,7 @@ const Form = ({ method = 'post', onSubmit = () => {}, children }: Formprops) => 
 	const methods = useForm();
 
 	const onHanldeSubmit = (data: any, e: any) => {
-		console.log(data, e);
+		methods.reset();
 		onSubmit(data, e);
 	};
 

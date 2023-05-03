@@ -16,10 +16,10 @@ import { b1, b2 } from '@assets/image/Banner/Accessory';
 
 // Type
 import { Option } from '@assets/types';
-import Productdetail from '@models/ProductDetail';
+import Productdetail from '@assets/types/ProductDetail';
 
 // Config
-import productAPI from '@config/productAPI';
+import productAPI from '@/API/productAPI';
 import { ProductList } from '@components/Product/ProductList';
 
 const filters: Option[] = [

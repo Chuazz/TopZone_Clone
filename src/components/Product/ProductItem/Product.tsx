@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 // Style
 import styles from './ProductItem.module.scss';
-import Productdetail from '@models/ProductDetail';
+import Productdetail from '@assets/types/ProductDetail';
 import { Image } from '@components/util/Image';
 import util from '@/util';
 import { Link } from 'react-router-dom';

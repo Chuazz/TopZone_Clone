@@ -6,6 +6,7 @@ import TextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize
 // Style
 import styles from './Input.module.scss';
 import { HTMLAttributes, HTMLInputTypeAttribute, useEffect, useState } from 'react';
+import { ErrorMessage } from '@hookform/error-message';
 
 type InputProps = {
 	label?: string;
@@ -73,6 +74,9 @@ const Input = ({
 					onBlur={(e) => onHanldeBlur(e)}
 				/>
 			)}
+			<p className={clsx(styles.errorMess)}>
+				<ErrorMessage name={registerName} />
+			</p>
 		</div>
 	);
 };

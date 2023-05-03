@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 
 // Model
-import Productdetail from '@models/ProductDetail';
+import Productdetail from '@assets/types/ProductDetail';
 
 // Util
 import util from '@/util';

@@ -7,7 +7,7 @@ import { BiChevronRight } from 'react-icons/bi';
 import { ProductItem } from '@components/Product/ProductItem';
 
 // Model
-import Productdetail from '@models/ProductDetail';
+import Productdetail from '@assets/types/ProductDetail';
 
 // Style
 import styles from './Product.module.scss';
