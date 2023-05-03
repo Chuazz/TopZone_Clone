@@ -2,8 +2,8 @@
 import { HiChevronLeft } from 'react-icons/hi';
 
 // Component
-import { Button } from '@components/Button';
-import { Icon } from '@components/Icon';
+import { Button } from '@components/Form/Button';
+import { Icon } from '@components/util/Icon';
 
 type PrevArrowProps = {
 	className?: string;

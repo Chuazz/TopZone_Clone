@@ -3,15 +3,15 @@ import { HiChevronDown } from 'react-icons/hi';
 import clsx from 'clsx';
 
 // Component
-import { Button } from '@components/Button';
-import { Icon } from '@components/Icon';
+import { Button } from '@components/Form/Button';
+import { Icon } from '@components/util/Icon';
 import { useEffect, useState } from 'react';
 
 // Style
 import styles from './Dropdown.module.scss';
 import { Option } from '@assets/types';
 import { tick } from '@assets/image/Layout';
-import { Image } from '@components/Image';
+import { Image } from '@components/util/Image';
 
 type DropdownProps = {
 	options: Option[];

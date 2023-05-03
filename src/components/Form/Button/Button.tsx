@@ -14,6 +14,7 @@ type ButtonProps = PropsWithChildren<{
 	rightIcon?: JSX.Element;
 	rightClass?: string;
 	style?: React.CSSProperties;
+	center?: boolean;
 	onClick?: Function;
 }>;
 
@@ -31,6 +32,7 @@ const Button = forwardRef<Ref, ButtonProps>(
 			rightClass,
 			children,
 			style,
+			center,
 			onClick = () => {},
 		},
 		ref,
@@ -39,12 +41,15 @@ const Button = forwardRef<Ref, ButtonProps>(
 			<div
 				ref={ref}
 				onClick={(e) => onClick(e)}
-				className={clsx(styles.container, 'row ali-center jus-center', className, { [styles.circle]: shape === 'circle' })}
+				className={clsx(styles.container, 'row ali-center', className, {
+					[styles.circle]: shape === 'circle',
+					['jus-center']: center,
+				})}
 				style={{ width: size, height: size, ...style }}
 			>
 				{leftIcon && <div className={clsx(styles.icon, styles.left, leftClass)}>{leftIcon}</div>}
 
-				<div className={clsx(styles.label, 'text-center')}>{children}</div>
+				<div className={clsx(styles.label)}>{children}</div>
 
 				{rightIcon && <div className={clsx(styles.icon, styles.right, rightClass)}>{rightIcon}</div>}
 			</div>

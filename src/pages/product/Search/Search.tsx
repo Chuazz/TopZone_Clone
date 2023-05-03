@@ -1,5 +1,4 @@
-import { Pagnination } from '@components/Pagnination';
-import ProductList from '@components/ProductList/ProductList';
+import { Pagnination } from '@components/Product/Pagnination';
 import productAPI from '@config/productAPI';
 import Productdetail from '@models/ProductDetail';
 import axios from 'axios';
@@ -9,6 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 
 // Style
 import styles from './Search.module.scss';
+import { ProductList } from '@components/Product/ProductList';
 
 const Search = () => {
 	const [products, setProducts] = useState<Productdetail[]>([]);

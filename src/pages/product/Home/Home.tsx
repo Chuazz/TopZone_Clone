@@ -2,18 +2,18 @@
 import clsx from 'clsx';
 
 // Component
-import { Carousel } from '@components/Carousel';
+import { Carousel } from '@components/Product/Carousel';
 
 // Style
 import styles from './Home.module.scss';
-import { Image } from '@components/Image';
+import { Image } from '@components/util/Image';
 import { accessory, phone } from '@assets/image/Layout/Category';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import productAPI from '@config/productAPI';
 import Productdetail from '@models/ProductDetail';
-import ProductList from '@components/ProductList/ProductList';
 import { NavLink } from 'react-router-dom';
+import { ProductList } from '@components/Product/ProductList';
 
 const Home = () => {
 	const [phones, setPhones] = useState<Productdetail[]>([]);

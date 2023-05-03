@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import clsx from 'clsx';
 
 // Component
-import { Image } from '@components/Image';
+import { Image } from '@components/util/Image';
 import { NextArrow, PrevArrow } from '@components/SlickArrow';
 
 // Image

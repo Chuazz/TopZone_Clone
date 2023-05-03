@@ -52,6 +52,21 @@ input {
 	font-size: inherit;
 }
 
+input,
+textarea {
+	&::placeholder {
+		color: #dfdfdf;
+	}
+
+	&:-ms-input-placeholder {
+		color: #dfdfdf;
+	}
+
+	&::-ms-input-placeholder {
+		color: #dfdfdf;
+	}
+}
+
 img {
 	width: 100%;
 	object-fit: cover;

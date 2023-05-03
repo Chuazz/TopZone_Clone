@@ -52,11 +52,14 @@
 			"@util/*": [
 				"src/util/*"
 			],
-			"@product/*": [
-				"src/pages/product/*"
+			"@Form/*": [
+				"src/components/Form/*"
 			],
-			"@Carousel/*": [
-				"src/components/Carousel/*"
+			"@Product/*": [
+				"src/components/Product/*"
+			],
+			"@ProductItem/*": [
+				"src/components/ProductItem/*"
 			]
 		}
 	},

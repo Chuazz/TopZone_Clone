@@ -5,16 +5,16 @@ import { IoClose } from 'react-icons/io5';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
 
 // Component
-import { Button } from '@/components/Button';
+import { Button } from '@components/Form/Button';
 
 // Image
-import { Image } from '@components/Image';
+import { Image } from '@components/util/Image';
 import { appleLogo, logo } from '@assets/image/Store';
 
 // Style
 import styles from './Header.module.scss';
-import { KeyboardEventHandler, useState } from 'react';
-import { Icon } from '@components/Icon';
+import { useState } from 'react';
+import { Icon } from '@components/util/Icon';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -36,10 +36,10 @@ const Header = () => {
 	};
 
 	const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		let element = e.target as HTMLInputElement;
+		const element = e.target as HTMLInputElement;
 
 		if (e.key === 'Enter') {
-			navigate(`search?q=${element.value}`);
+			navigate(`/home/search?q=${element.value}`);
 			onCloseSearchForm();
 		}
 	};
@@ -93,7 +93,7 @@ const Header = () => {
 								<Icon size={16} Element={HiMagnifyingGlass} />
 							</Button>
 
-							<a className={clsx(styles.cart, styles.navItem, 'relative')}>
+							<Link to={'/user/cart'} className={clsx(styles.cart, styles.navItem, 'relative')}>
 								<Button>
 									<Icon size={16} Element={BsFillBagFill} />
 								</Button>
@@ -104,7 +104,7 @@ const Header = () => {
 										<button>Xem giỏ hàng</button>
 									</div>
 								</div>
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>

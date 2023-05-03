@@ -2,13 +2,13 @@
 import clsx from 'clsx';
 
 // Style
-import styles from './Product.module.scss';
+import styles from './ProductItem.module.scss';
 import Productdetail from '@models/ProductDetail';
-import { Image } from '@components/Image';
+import { Image } from '@components/util/Image';
 import util from '@/util';
 import { Link } from 'react-router-dom';
 
-type ProductProps = {
+type ProductItemProps = {
 	className?: string;
 	info: Productdetail;
 	isShowMemory?: boolean;
@@ -16,7 +16,7 @@ type ProductProps = {
 
 const env = import.meta.env;
 
-const Product = ({ className, info, isShowMemory = false }: ProductProps) => {
+const ProductItem = ({ className, info, isShowMemory = false }: ProductItemProps) => {
 	return (
 		<div className={clsx(className, 'p-l-12 p-r-12 p-b-24')}>
 			<Link
@@ -45,4 +45,4 @@ const Product = ({ className, info, isShowMemory = false }: ProductProps) => {
 	);
 };
 
-export default Product;
+export default ProductItem;

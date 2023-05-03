@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { BiChevronRight } from 'react-icons/bi';
 
 // Component
-import { Product } from '@components/Product';
+import { ProductItem } from '@components/Product/ProductItem';
 
 // Model
 import Productdetail from '@models/ProductDetail';
 
 // Style
 import styles from './Product.module.scss';
-import { Icon } from '@components/Icon';
+import { Icon } from '@components/util/Icon';
 import { NextArrow, PrevArrow } from '@components/SlickArrow';
 import Slider from 'react-slick';
 
@@ -62,7 +62,7 @@ const ProductList = ({
 				{!isCarousel ? (
 					<div className="row">
 						{products.map((product, i) => (
-							<Product
+							<ProductItem
 								key={i}
 								info={product}
 								isShowMemory={isShowMemory}
@@ -74,7 +74,7 @@ const ProductList = ({
 					<div>
 						<Slider {...settings}>
 							{products.map((product, i) => (
-								<Product key={i} info={product} />
+								<ProductItem key={i} info={product} />
 							))}
 						</Slider>
 					</div>

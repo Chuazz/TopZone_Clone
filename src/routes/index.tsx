@@ -1,7 +1,7 @@
 import { Navigate, createBrowserRouter } from 'react-router-dom';
 import { Accessory, Detail, Home, Phone, Search } from '../pages/product';
 import DefaultLayout from '../layouts/DefaultLayout';
-import { Profile } from '@pages/user';
+import { Cart, Profile } from '@pages/user';
 
 const router = createBrowserRouter([
 	{
@@ -42,6 +42,10 @@ const router = createBrowserRouter([
 			{
 				path: 'profile',
 				element: <Profile />,
+			},
+			{
+				path: 'cart',
+				element: <Cart />,
 			},
 		],
 	},

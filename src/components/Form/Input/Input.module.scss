@@ -1,0 +1,37 @@
+.container {
+	position: relative;
+}
+
+.container.active {
+	.label {
+		top: -12px;
+		background: linear-gradient(to bottom, #3e3e3f, #3e3e3f, #494949, #494949);
+		color: #0089fe;
+	}
+
+	.input {
+		border: 1px solid #0089fe;
+	}
+}
+
+.label {
+	position: absolute;
+	left: 12px;
+	top: 11px;
+	padding: 0 4px;
+	font-size: 1.35rem;
+	color: #dfdfdf;
+	font-weight: 400;
+	transition: all 0.1s linear;
+}
+
+.input {
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	padding: 12px 12px 12px 12px;
+	background: #494949;
+	border: 1px solid #747474;
+	border-radius: 8px;
+}

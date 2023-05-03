@@ -1,4 +1,4 @@
-import { Image } from '@components/Image';
+import { Image } from '@components/util/Image';
 import { download, phone, repeat, shield, truck } from '@assets/image/Layout/Product';
 
 const Policy = () => {

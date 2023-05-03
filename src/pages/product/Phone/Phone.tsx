@@ -4,10 +4,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // Component
-import { Carousel } from '@components/Carousel';
-import { Dropdown } from '@components/Dropdown';
-import { Pagnination } from '@components/Pagnination';
-import ProductList from '@components/ProductList/ProductList';
+import { Carousel } from '@components/Product/Carousel';
+import { Dropdown } from '@components/util/Dropdown';
+import { Pagnination } from '@components/Product/Pagnination';
 
 // Style
 import styles from './Phone.module.scss';
@@ -21,6 +20,7 @@ import Productdetail from '@models/ProductDetail';
 
 // Config
 import productAPI from '@config/productAPI';
+import { ProductList } from '@components/Product/ProductList';
 
 const filters: Option[] = [
 	{
