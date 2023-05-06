@@ -1,15 +1,21 @@
-.container {
+.inputContainer {
 	position: relative;
 }
 
-.container.active {
-	.label {
+.inputContainer.error {
+	.label.choice {
+		color: #f35111;
+	}
+}
+
+.inputContainer.active {
+	.label:not(.choice) {
 		top: -12px;
 		background: linear-gradient(to bottom, #3e3e3f, #3e3e3f, #494949, #494949);
 		color: #0089fe;
 	}
 
-	.input {
+	.input:not([type='radio']):not([type='checkbox']) {
 		border: 1px solid #0089fe;
 	}
 }
@@ -25,7 +31,12 @@
 	transition: all 0.1s linear;
 }
 
-.input {
+.label.choice {
+	position: initial;
+	font-size: 1.5rem;
+}
+
+.input:not([type='radio']):not([type='checkbox']) {
 	background: transparent;
 	height: 100%;
 	width: 100%;
@@ -39,4 +50,17 @@
 .errorMess {
 	font-size: 1.3rem;
 	color: #f35111;
+}
+
+.button {
+	background: #0089fe;
+	color: #fff;
+	cursor: pointer;
+	padding: 8px 12px;
+	min-width: 80px;
+	border-radius: 8px;
+
+	&:hover {
+		background: #0473d4;
+	}
 }

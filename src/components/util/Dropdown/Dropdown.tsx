@@ -3,7 +3,7 @@ import { HiChevronDown } from 'react-icons/hi';
 import clsx from 'clsx';
 
 // Component
-import { Button } from '@components/Form/Button';
+import { Button } from '@components/util/Button';
 import { Icon } from '@components/util/Icon';
 import { useEffect, useState } from 'react';
 

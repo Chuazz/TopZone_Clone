@@ -5,7 +5,7 @@ import { IoClose } from 'react-icons/io5';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
 
 // Component
-import { Button } from '@components/Form/Button';
+import { Button } from '@components/util/Button';
 
 // Image
 import { Image } from '@components/util/Image';
@@ -97,13 +97,6 @@ const Header = () => {
 								<Button>
 									<Icon size={16} Element={BsFillBagFill} />
 								</Button>
-								<p className={clsx(styles.cartCount)}></p>
-								<div className={clsx(styles.notify)}>
-									<p>Đã thêm sản phẩm vào giỏ hàng</p>
-									<div className={clsx(styles.buyBtn)}>
-										<button>Xem giỏ hàng</button>
-									</div>
-								</div>
 							</Link>
 						</div>
 					</div>

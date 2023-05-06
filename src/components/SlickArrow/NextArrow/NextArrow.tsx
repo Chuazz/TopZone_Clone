@@ -2,7 +2,7 @@
 import { HiChevronRight } from 'react-icons/hi';
 
 // Component
-import { Button } from '@components/Form/Button';
+import { Button } from '@components/util/Button';
 import { Icon } from '@components/util/Icon';
 
 type NextArrowProps = {

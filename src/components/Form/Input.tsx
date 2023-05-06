@@ -4,7 +4,7 @@ import { RegisterOptions, useFormContext } from 'react-hook-form';
 import TextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize';
 
 // Style
-import styles from './Input.module.scss';
+import styles from './Form.module.scss';
 import { HTMLAttributes, HTMLInputTypeAttribute, useEffect, useState } from 'react';
 import { ErrorMessage } from '@hookform/error-message';
 
@@ -35,7 +35,12 @@ const Input = ({
 	inputAttributes,
 	textareaAutoSizeProps,
 }: InputProps) => {
-	const { register, watch, setValue } = useFormContext();
+	const {
+		register,
+		watch,
+		setValue,
+		formState: { errors },
+	} = useFormContext();
 	const [active, setActive] = useState(watch(registerName) ? true : false);
 
 	const onHanldeBlur = (e: React.FocusEvent) => {
@@ -51,29 +56,45 @@ const Input = ({
 	}, []);
 
 	return (
-		<div className={clsx(styles.container, className, { [styles.active]: active })}>
-			<p className={clsx(styles.label, labelClassName)}>{label}</p>
+		<div
+			className={clsx(styles.inputContainer, className, {
+				[styles.active]: active,
+				[styles.error]: errors[registerName] ? true : false,
+			})}
+		>
+			<div className={clsx('row ali-center')}>
+				{tag === 'input' ? (
+					<input
+						id={inputAttributes?.id}
+						type={type}
+						defaultValue={defaultValue}
+						{...inputAttributes}
+						{...register(registerName, registerOptions)}
+						className={clsx(styles.input, inputClassName)}
+						onClick={() => setActive(true)}
+						onBlur={(e) => onHanldeBlur(e)}
+					/>
+				) : (
+					<TextareaAutosize
+						{...register(registerName, registerOptions)}
+						className={clsx(styles.input, inputClassName)}
+						minRows={3}
+						{...textareaAutoSizeProps}
+						onClick={() => setActive(true)}
+						onBlur={(e) => onHanldeBlur(e)}
+					/>
+				)}
 
-			{tag === 'input' ? (
-				<input
-					type={type}
-					defaultValue={defaultValue}
-					{...inputAttributes}
-					{...register(registerName, registerOptions)}
-					className={clsx(styles.input, inputClassName)}
-					onClick={() => setActive(true)}
-					onBlur={(e) => onHanldeBlur(e)}
-				/>
-			) : (
-				<TextareaAutosize
-					{...register(registerName, registerOptions)}
-					className={clsx(styles.input, inputClassName)}
-					minRows={3}
-					{...textareaAutoSizeProps}
-					onClick={() => setActive(true)}
-					onBlur={(e) => onHanldeBlur(e)}
-				/>
-			)}
+				<label
+					className={clsx(styles.label, labelClassName, {
+						[styles.choice]: type === 'checkbox' || type === 'radio',
+					})}
+					htmlFor={inputAttributes?.id}
+				>
+					{label}
+				</label>
+			</div>
+
 			<p className={clsx(styles.errorMess)}>
 				<ErrorMessage name={registerName} />
 			</p>

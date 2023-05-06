@@ -63,6 +63,9 @@
 			],
 			"@API/*": [
 				"src/API/*"
+			],
+			"@AdminLayout/*": [
+				"src/layouts/AdminLayout/*"
 			]
 		}
 	},

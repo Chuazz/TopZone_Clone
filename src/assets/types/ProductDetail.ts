@@ -15,6 +15,7 @@ type Productdetail = {
 	binh_luans: Comment[];
 	thong_tin_san_phams: thong_tin_san_pham[];
 	mau_sacs: mac_sac[];
+	so_luong: number;
 };
 
 export default Productdetail;
