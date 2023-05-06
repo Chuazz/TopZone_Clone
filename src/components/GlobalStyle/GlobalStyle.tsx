@@ -1,13 +1,13 @@
 // Framework
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 
 // style
-import './GlobalStyle.scss';
-import './library/Grid.scss';
-import './custom/ReactSlick.scss';
-import './library/Margin.scss';
-import './library/Padding.scss';
-
+import "./GlobalStyle.scss";
+import "./library/Grid.scss";
+import "./custom/ReactSlick.scss";
+import "./library/Margin.scss";
+import "./library/Padding.scss";
+import "./library/Table.scss";
 
 type GlobalStyleProps = PropsWithChildren<{}>;
 

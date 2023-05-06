@@ -1,50 +1,90 @@
-import { Navigate, createBrowserRouter } from 'react-router-dom';
-import { Accessory, Detail, Home, Phone, Search } from '../pages/product';
-import DefaultLayout from '../layouts/DefaultLayout';
-import { Cart, Profile } from '@pages/user';
+import { Navigate, createBrowserRouter } from "react-router-dom";
+import { Accessory, Detail, Home, Phone, Search } from "../pages/product";
+import DefaultLayout from "../layouts/DefaultLayout";
+import { Cart, Profile } from "@pages/user";
+import { AdminLayout } from "@layouts/AdminLayout";
+import { Customer, ExportInvoice, ImportInvoice, Product, Specification, Staff, Supplier } from "@pages/admin";
 
 const router = createBrowserRouter([
 	{
-		path: '/',
-		element: <Navigate to="/home" />,
+		path: "/",
+		// element: <Navigate to="/home" />,
+		element: <Navigate to="/admin" />,
 	},
 	{
-		path: '/home',
-		element: <DefaultLayout></DefaultLayout>,
+		path: "/admin",
+		element: <AdminLayout />,
 		children: [
 			{
-				path: '',
-
+				path: "",
+				element: <Navigate to="/admin/product" />,
+			},
+			{
+				path: "product",
+				element: <Product />,
+			},
+			{
+				path: "supplier",
+				element: <Supplier />,
+			},
+			{
+				path: "staff",
+				element: <Staff />,
+			},
+			{
+				path: "customer",
+				element: <Customer />,
+			},
+			{
+				path: "specification",
+				element: <Specification />,
+			},
+			{
+				path: "export-invoice",
+				element: <ExportInvoice />,
+			},
+			{
+				path: "import-invoice",
+				element: <ImportInvoice />,
+			},
+		],
+	},
+	{
+		path: "/home",
+		element: <DefaultLayout />,
+		children: [
+			{
+				path: "",
 				element: <Home />,
 			},
 			{
-				path: 'phone',
+				path: "phone",
 				element: <Phone />,
 			},
 			{
-				path: 'accessory',
+				path: "accessory",
 				element: <Accessory />,
 			},
 			{
-				path: 'search',
+				path: "search",
 				element: <Search />,
 			},
 			{
-				path: 'detail/:product',
+				path: "detail/:product",
 				element: <Detail />,
 			},
 		],
 	},
 	{
-		path: '/user',
+		path: "/user",
 		element: <DefaultLayout></DefaultLayout>,
 		children: [
 			{
-				path: 'profile',
+				path: "profile",
 				element: <Profile />,
 			},
 			{
-				path: 'cart',
+				path: "cart",
 				element: <Cart />,
 			},
 		],

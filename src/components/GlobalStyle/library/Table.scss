@@ -1,0 +1,39 @@
+.table {
+	position: relative;
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th {
+		padding: 12px 0;
+		font-size: 1.5rem;
+		background: #4965d6;
+		font-weight: 400;
+		color: #fff;
+		border: 1px solid #97b6e5;
+	}
+
+	td {
+		padding: 12px;
+		border: 1px solid #97b6e5;
+	}
+
+	thead {
+		position: sticky;
+		top: 73.5px;
+	}
+
+	tr {
+		cursor: pointer;
+		transition: all 0.1s linear;
+	}
+
+	tr:hover {
+		background: #1467cd;
+
+		td {
+			color: #fff;
+		}
+	}
+}

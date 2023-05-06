@@ -11,7 +11,7 @@ type DefaultLayoutProps = {};
 
 const DefaultLayout = ({}: DefaultLayoutProps) => {
 	return (
-		<div>
+		<div className={styles.container}>
 			<Header />
 
 			<div className={clsx(styles.content)}>
