@@ -18,7 +18,6 @@ import { commentAPI, productAPI } from '@/API';
 import binh_luan from '@models/binh_luan.model';
 import { useState } from 'react';
 import axios from 'axios';
-import { useForm } from 'react-hook-form';
 
 type CommentProps = {
 	info: Productdetail;

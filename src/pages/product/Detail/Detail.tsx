@@ -45,7 +45,7 @@ const Detail = () => {
 	};
 
 	useEffect(() => {
-		axios.get(productAPI.product_list({ type: 2 })).then((res) => {
+		axios.get(productAPI.list({ type: 2 })).then((res) => {
 			setaccessories(res.data.data);
 		});
 	}, []);

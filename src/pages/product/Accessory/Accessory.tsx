@@ -1,49 +1,49 @@
 // Framework
-import clsx from 'clsx';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import clsx from "clsx";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 // Component
-import { Carousel } from '@components/Product/Carousel';
-import { Dropdown } from '@components/util/Dropdown';
-import { Pagnination } from '@components/Product/Pagnination';
+import { Carousel } from "@components/Product/Carousel";
+import { Dropdown } from "@components/util/Dropdown";
+import { Pagnination } from "@components/Product/Pagnination";
 
 // Style
-import styles from './Accessory.module.scss';
+import styles from "./Accessory.module.scss";
 
 // Image
-import { b1, b2 } from '@assets/image/Banner/Accessory';
+import { b1, b2 } from "@assets/image/Banner/Accessory";
 
 // Type
-import { Option } from '@assets/types';
-import Productdetail from '@assets/types/ProductDetail';
+import { Option } from "@assets/types";
+import Productdetail from "@assets/types/ProductDetail";
 
 // Config
-import productAPI from '@/API/productAPI';
-import { ProductList } from '@components/Product/ProductList';
+import productAPI from "@/API/productAPI";
+import { ProductList } from "@components/Product/ProductList";
 
 const filters: Option[] = [
 	{
-		label: 'Giá thấp đến cao',
-		value: 'asc',
+		label: "Giá thấp đến cao",
+		value: "asc",
 	},
 	{
-		label: 'Giá cao đến thấp',
-		value: 'desc',
+		label: "Giá cao đến thấp",
+		value: "desc",
 	},
 ];
 
-const categories: string[] = ['', 'iPhone 14', 'iPhone 13', 'iPhone 12', 'iPhone 11', 'iPhone SE'];
+const categories: string[] = ["", "iPhone 14", "iPhone 13", "iPhone 12", "iPhone 11", "iPhone SE"];
 
 const Accessory = () => {
 	const [accessories, setaccessories] = useState<Productdetail[]>([]);
 	const [currPage, setCurrPage] = useState(1);
 	const [lastPage, setlastPage] = useState(1);
-	const [currFilter, setCurrFilter] = useState({ name: '', sort: 'asc' });
+	const [currFilter, setCurrFilter] = useState({ name: "", sort: "asc" });
 
 	const onCategoryItemClick = (name: string) => {
-		if (name === 'Tất cả') {
-			name = '';
+		if (name === "Tất cả") {
+			name = "";
 		}
 		setCurrFilter({ ...currFilter, name });
 	};
@@ -57,7 +57,7 @@ const Accessory = () => {
 	};
 
 	useEffect(() => {
-		axios.get(productAPI.product_list({ ...currFilter, page: currPage, type: 2 })).then((res) => {
+		axios.get(productAPI.list({ ...currFilter, page: currPage, type: 2 })).then((res) => {
 			setaccessories(res.data.data);
 			setlastPage(res.data.last_page);
 		});
@@ -71,7 +71,7 @@ const Accessory = () => {
 				<Carousel borderRadius="20px" banners={[b1, b2]} />
 
 				<div className="row ali-center jus-between p-t-32 p-b-32">
-					<div className={clsx(styles.categoryList, 'row ali-center gap-24')}>
+					<div className={clsx(styles.categoryList, "row ali-center gap-24")}>
 						{categories.map((category, i) => (
 							<p
 								key={i}
@@ -80,7 +80,7 @@ const Accessory = () => {
 									onCategoryItemClick(category);
 								}}
 							>
-								{category ? category : 'Tất cả'}
+								{category ? category : "Tất cả"}
 							</p>
 						))}
 					</div>

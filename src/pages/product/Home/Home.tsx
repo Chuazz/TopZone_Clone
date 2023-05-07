@@ -1,30 +1,30 @@
 // Framework
-import clsx from 'clsx';
+import clsx from "clsx";
 
 // Component
-import { Carousel } from '@components/Product/Carousel';
+import { Carousel } from "@components/Product/Carousel";
 
 // Style
-import styles from './Home.module.scss';
-import { Image } from '@components/util/Image';
-import { accessory, phone } from '@assets/image/Layout/Category';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import productAPI from '@/API/productAPI';
-import Productdetail from '@assets/types/ProductDetail';
-import { NavLink } from 'react-router-dom';
-import { ProductList } from '@components/Product/ProductList';
+import styles from "./Home.module.scss";
+import { Image } from "@components/util/Image";
+import { accessory, phone } from "@assets/image/Layout/Category";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import productAPI from "@/API/productAPI";
+import Productdetail from "@assets/types/ProductDetail";
+import { NavLink } from "react-router-dom";
+import { ProductList } from "@components/Product/ProductList";
 
 const Home = () => {
 	const [phones, setPhones] = useState<Productdetail[]>([]);
 	const [accessories, setAccessories] = useState<Productdetail[]>([]);
 
 	useEffect(() => {
-		axios.get(productAPI.product_list({ perPage: 12 })).then((res) => {
+		axios.get(productAPI.list({ perPage: 12 })).then((res) => {
 			setPhones(res.data.data);
 		});
 
-		axios.get(productAPI.product_list({ type: 2, perPage: 12 })).then((res) => {
+		axios.get(productAPI.list({ type: 2, perPage: 12 })).then((res) => {
 			setAccessories(res.data.data);
 		});
 	}, []);
@@ -34,8 +34,8 @@ const Home = () => {
 			<Carousel />
 
 			<div className="wide grid">
-				<div className={clsx('row jus-center gap-16 p-t-40 p-b-32')}>
-					<NavLink to={'/home/phone'} className={styles.categoryItem}>
+				<div className={clsx("row jus-center gap-16 p-t-40 p-b-32")}>
+					<NavLink to={"/home/phone"} className={styles.categoryItem}>
 						<div className="row flex-column ali-center h-100">
 							<div className="flex-1 row flex-column jus-end">
 								<Image src={phone} size={110} />
@@ -44,7 +44,7 @@ const Home = () => {
 						</div>
 					</NavLink>
 
-					<NavLink to={'/home/accessory'} className={styles.categoryItem}>
+					<NavLink to={"/home/accessory"} className={styles.categoryItem}>
 						<div className="row flex-column ali-center h-100">
 							<div className="flex-1 row flex-column jus-end">
 								<Image src={accessory} size={70} />

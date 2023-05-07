@@ -6,7 +6,7 @@
 
 .logo {
 	background: #3e3e3f;
-	padding: 20px 12px;
+	padding: 16.8px 12px;
 	position: sticky;
 	top: 0;
 }
@@ -20,8 +20,8 @@
 
 .content {
 	height: 100vh;
-	overflow: overlay;
 	position: relative;
+	overflow: auto;
 }
 
 .navItem {

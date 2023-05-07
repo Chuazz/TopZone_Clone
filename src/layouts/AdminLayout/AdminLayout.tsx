@@ -31,7 +31,7 @@ const navs = [
 		path: "export-invoice",
 	},
 	{
-		name: "Hóa đơn xuất",
+		name: "Hóa đơn nhập",
 		path: "import-invoice",
 	},
 ];
